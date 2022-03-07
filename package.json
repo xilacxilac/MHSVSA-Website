@@ -1,0 +1,42 @@
+{
+	"name": "mhsvsa-website",
+	"version": "0.1.0",
+	"author": "The-Vinh Tran-Luu <xilacxilac@gmail.com>",
+	"license": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xilacxilac/"
+	},
+	"keywords": [
+		"NextJS",
+		"ChakraUI",
+		"Boilerplate"
+	],
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"clean": "npx prettier --write .",
+		"test": "jest",
+		"kill": "taskkill /f /im node.exe"
+	},
+	"dependencies": {
+		"@chakra-ui/icons": "^1.1.1",
+		"@chakra-ui/react": "^1.7.2",
+		"@emotion/react": "^11.7.0",
+		"@emotion/styled": "^11.6.0",
+		"axios": "^0.26.0",
+		"framer-motion": "^5.3.3",
+		"next": "^12.0.7",
+		"react": "^17.0.2",
+		"react-dom": "17.0.2",
+		"react-icons": "^4.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.12",
+		"@types/react": "^17.0.37",
+		"eslint": "^8.3.0",
+		"prettier": "^2.5.1",
+		"typescript": "^4.5.2"
+	}
+}
