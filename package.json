@@ -2,7 +2,7 @@
 	"name": "mhsvsa-website",
 	"version": "0.1.0",
 	"author": "The-Vinh Tran-Luu <xilacxilac@gmail.com>",
-	"license": "",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/xilacxilac/"
