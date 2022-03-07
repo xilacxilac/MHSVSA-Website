@@ -1,8 +1,8 @@
-## MHSVSA Website
+# MHSVSA Website
 
 The source code for McLean High School Vietnamese Student Association's Website
 
-# Stack
+## Stack
 
 - Typescript
 - ChakraUI
@@ -14,13 +14,13 @@ The source code for McLean High School Vietnamese Student Association's Website
 - Jest
 - React Icons
 
-# Setup
+## Setup
 
 Install dependencies `npm i` or `yarn`
 
 Install prettier globally `npm i -g prettier`
 
-# Commands
+## Commands
 
 Run on local development server `npm run dev`
 
