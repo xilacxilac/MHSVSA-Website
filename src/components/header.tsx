@@ -3,19 +3,13 @@ import { ColorModeSwitcher } from "@components/ColorModeSwitcher";
 import { useColorModeValue } from "@chakra-ui/react";
 
 // eslint-disable-next-line import/no-default-export
-export default function Main(): JSX.Element {
-	const nameColor = useColorModeValue(
-		"/mhsvsa/mhsvsa_white.png",
-		"/mhsvsa/mhsvsa_black.png"
-	);
+export default function Header(): JSX.Element {
+	const nameColor = useColorModeValue("/mhsvsa/mhsvsa_white.png", "/mhsvsa/mhsvsa_black.png");
 	const background = useColorModeValue("#1a202c", "white");
-	const borderTopConfig = useColorModeValue(
-		"5px dark_gray solid",
-		"5px #5cfff1 solid"
-	);
+	const borderTopConfig = useColorModeValue("5px dark_gray solid", "5px #5cfff1 solid");
 	return (
 		<HStack
-			borderTop="none" //{borderTopConfig}
+			borderTop={borderTopConfig}
 			justify="space-between"
 			bg={background}
 			px="50px"

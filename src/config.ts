@@ -12,7 +12,7 @@ type MetaType = {
 };
 
 const META: MetaType = {
-	title: "NextJS ChakraUI Template | Hazim Arafa",
+	title: "MHSVSA-Website",
 	lang: "en-us",
 	description:
 		"Boilerplate built to scale containing Typescript + NextJS + ChakraUI + Google Analytics + ESLint + Jest + Styled Components + Icons",
