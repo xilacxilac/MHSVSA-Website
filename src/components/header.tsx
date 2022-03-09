@@ -6,10 +6,8 @@ import { useColorModeValue } from "@chakra-ui/react";
 export default function Header(): JSX.Element {
 	const nameColor = useColorModeValue("/mhsvsa/mhsvsa_white.png", "/mhsvsa/mhsvsa_black.png");
 	const background = useColorModeValue("#1a202c", "white");
-	const borderTopConfig = useColorModeValue("5px dark_gray solid", "5px #5cfff1 solid");
 	return (
 		<HStack
-			borderTop={borderTopConfig}
 			justify="space-between"
 			bg={background}
 			px="50px"
