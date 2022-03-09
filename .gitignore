@@ -107,3 +107,6 @@ dist
 
 # VSCode Folder
 .vscode
+
+# node_modules
+node_modules
