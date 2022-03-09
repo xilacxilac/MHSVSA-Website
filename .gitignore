@@ -105,8 +105,11 @@ dist
 
 .idea
 
-# VSCode Folder
+# VSCode folder
 .vscode
 
-# node_modules
+# node_modules folder
 node_modules
+
+# .next folder
+.next
