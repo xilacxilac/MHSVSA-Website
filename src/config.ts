@@ -15,18 +15,18 @@ const META: MetaType = {
 	title: "MHSVSA-Website",
 	lang: "en-us",
 	description:
-		"Boilerplate built to scale containing Typescript + NextJS + ChakraUI + Google Analytics + ESLint + Jest + Styled Components + Icons",
-	url: "https://boilerplate.hazimarafa.tech",
+		"McLean High School VSA's Website",
+	url: "",
 	image: "/logo.png",
 	tags: [
-		"nextjs",
-		"typescript",
-		"chakraui",
-		"google analytics",
-		"eslint",
-		"jest",
-		"styled components",
-		"icons",
+		"vsa",
+		"mhsvsa",
+		"mcleanvsa",
+		"mclean vsa",
+		"mhs vsa",
+		"mclean high school vsa",
+		"mclean high school vietnamese student association",
+		"mhs vietnamese student association",
 	],
 };
 
