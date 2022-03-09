@@ -38,9 +38,9 @@ export default function Header(): JSX.Element {
 				}}
 			>
 				<NavigationBar href="/aboutus" text="About Us" />
-				<NavigationBar href="/exeboard" text="Executive Board" />
+				<NavigationBar href="/officers" text="Officers" />
 				<NavigationBar href="/events" text="Events" />
-				<NavigationBar href="/contact" text="Contact" />
+				<NavigationBar href="/contactus" text="Contact Us" />
 				<ColorModeSwitcher />
 			</HStack>
 		</HStack>
