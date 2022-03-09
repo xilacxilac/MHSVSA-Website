@@ -1,7 +1,7 @@
 import { VStack, Center, Text } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
 
-export default function Home() {
+export default function Officers() {
 	const background = useColorModeValue("white", "black");
 	return (
 		<VStack bg={background}>

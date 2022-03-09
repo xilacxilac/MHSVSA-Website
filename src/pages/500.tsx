@@ -1,6 +1,6 @@
-import { VStack, Heading, Link, Text } from "@chakra-ui/react";
+import { VStack, Heading, Text } from "@chakra-ui/react";
 
-export default function Error404(): JSX.Element {
+export default function Error500(): JSX.Element {
 	return (
 		<VStack justify="center">
 			<Heading>404 error</Heading>

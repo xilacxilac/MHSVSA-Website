@@ -37,6 +37,7 @@ export default function Header(): JSX.Element {
 					xl: "40px",
 				}}
 			>
+				<NavigationBar href="/" text="Home" />
 				<NavigationBar href="/aboutus" text="About Us" />
 				<NavigationBar href="/officers" text="Officers" />
 				<NavigationBar href="/events" text="Events" />
