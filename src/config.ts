@@ -12,7 +12,7 @@ type MetaType = {
 };
 
 const META: MetaType = {
-	title: "MHSVSA-Website",
+	title: "MHS VSA",
 	lang: "en-us",
 	description:
 		"McLean High School VSA's Website",
@@ -20,6 +20,17 @@ const META: MetaType = {
 	image: "/logo.png",
 	tags: [
 		"vsa",
+		"vietnamese student association",
+		"vsa va",
+		"vietnamese student association va",
+		"vsa virginia",
+		"vietnamese student association virginia",
+		"va vsa",
+		"va vietnamese student association",
+		"nova vsa",
+		"novavsa",
+		"vietnamese student association nova",
+		"vsa nova",
 		"mhsvsa",
 		"mcleanvsa",
 		"mclean vsa",

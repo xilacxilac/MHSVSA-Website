@@ -1,11 +1,13 @@
 import React from 'react';
-import { VStack, Text, Box, IconButton, useBreakpointValue, Stack, Heading, Container, Center, Wrap, WrapItem } from "@chakra-ui/react";
+import { VStack, Text, Box, IconButton, useBreakpointValue, Stack, Heading,
+	Container, Center, Wrap, WrapItem, Divider, Link } from "@chakra-ui/react";
+// @ts-ignore
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import Slider from 'react-slick';
 import { useColorModeValue } from "@chakra-ui/react";
 
-export default function Home() {
-	// @ts-ignore
+export default function Home(): JSX.Element {
 	const width = findWidth();
 	console.log({width});
 	const background = useColorModeValue("black", "white");
@@ -15,48 +17,44 @@ export default function Home() {
 		<VStack bg={background}>
 			<ImageCaptionCarousel />
 			<VStack bg={background} h="2000px">
-				<Box w={width} h="50px" bg={background}>
-
+				<Box h="50px" bg={background}></Box>
+				<Box w={{base: width * .9125 + 10, md: width * .7625 + 20}}>
+					<Divider height="10px" borderColor="gray"/>
 				</Box>
-				<Box justify="center" bg="pink" w={{base: width * .9 + 10, md:width * .75 + 20}} maxH={boxContainerHeight}>
+				<Box h="10px" bg={background}></Box>
+				<Box justify="center" w={{base: width * .9 + 10, md:width * .75 + 20}} maxH={boxContainerHeight}>
 					<Wrap spacing="10px" >
-						<WrapItem>
-							<Center bg="blue" w={boxSize} h={boxSize}>
-								About Us
-							</Center>
-						</WrapItem>
-						<WrapItem>
-							<Center bg="red" w={boxSize} h={boxSize}>
-								Officers
-							</Center>
-						</WrapItem>
-						<WrapItem>
-							<Center bg="green" w={boxSize} h={boxSize}> 
-								Events
-							</Center>
-						</WrapItem>
-						<WrapItem>
-							<Center bg="black" w={boxSize} h={boxSize}>
-								Box 4
-							</Center>
-						</WrapItem>
-						<WrapItem>
-							<Center bg="purple" w={boxSize} h={boxSize}>
-								Merch
-							</Center>
-						</WrapItem>
-						<WrapItem>
-							<Center bg="orange" w={boxSize} h={boxSize}>
-								Contact Us
-							</Center>
-						</WrapItem>
+						<CardBox bg="blue" boxSize={boxSize} text="About Us" href="/aboutus"/>
+						<CardBox bg="red" boxSize={boxSize} text="Officers" href="/officers"/>
+						<CardBox bg="green" boxSize={boxSize} text="Events" href="/events"/>
+						<CardBox bg="black" boxSize={boxSize} text="Gallery" href="/gallery"/>
+						<CardBox bg="purple" boxSize={boxSize} text="Merch" href="/merch"/>
+						<CardBox bg="orange" boxSize={boxSize} text="Contact Us" href="/contactus"/>
 					</Wrap>
 				</Box>
+				<Box w={{base: width * .9125 + 10, md: width * .7625 + 20}}>
+					<Divider height="17.5px" borderColor="gray"/>
+				</Box>
+				<Box h="30px" bg={background}></Box>
 			</VStack>
 		</VStack>
 	);
 }
   
+function CardBox(props) {
+	return (
+		<WrapItem>
+			<Link href={props.href}>
+				<Center bg={props.bg} w={props.boxSize} h={props.boxSize}>
+					<Text>
+						{props.text}
+					</Text>
+				</Center>
+			</Link>
+		</WrapItem>
+	);
+}
+
 function ImageCaptionCarousel() {
 	// Cards for the Carousel
 	const cards = [
@@ -125,7 +123,7 @@ function ImageCaptionCarousel() {
 				zIndex={2}
 				onClick={() => slider?.slickPrev()}
 			>
-			<BiLeftArrowAlt size="40px"/>
+			<GoChevronLeft size="40px"/>
 			</IconButton>
 			{/* Right Button */}
 			<IconButton
@@ -138,7 +136,7 @@ function ImageCaptionCarousel() {
 				zIndex={2}
 				onClick={() => slider?.slickNext()}
 			>
-			<BiRightArrowAlt size="40px" />
+			<GoChevronRight size="40px" />
 			</IconButton>
 			{/* Slider */}
 			<Slider {...imageCarouselSettings} ref={(slider) => setSlider(slider)}>
