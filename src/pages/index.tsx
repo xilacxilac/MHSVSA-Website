@@ -1,8 +1,6 @@
 import React from 'react';
 import { VStack, Text, Box, IconButton, useBreakpointValue, Stack, Heading,
 	Container, Center, Wrap, WrapItem, Divider, Link } from "@chakra-ui/react";
-// @ts-ignore
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import Slider from 'react-slick';
 import { useColorModeValue } from "@chakra-ui/react";
@@ -27,7 +25,7 @@ export default function Home(): JSX.Element {
 						<CardBox bg="blue" boxSize={boxSize} text="About Us" href="/aboutus"/>
 						<CardBox bg="red" boxSize={boxSize} text="Officers" href="/officers"/>
 						<CardBox bg="green" boxSize={boxSize} text="Events" href="/events"/>
-						<CardBox bg="black" boxSize={boxSize} text="Gallery" href="/gallery"/>
+						<CardBox bg="black" boxSize={boxSize} text="Fundraiser" href="/fundraiser"/>
 						<CardBox bg="purple" boxSize={boxSize} text="Merch" href="/merch"/>
 						<CardBox bg="orange" boxSize={boxSize} text="Contact Us" href="/contactus"/>
 					</Wrap>
@@ -159,6 +157,7 @@ function ImageCaptionCarousel() {
 							position="absolute"
 							top="80%"
 							transform="translate(0, -50%)"
+							
 						>
 							<Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} textAlign="center">{card.title}</Heading>
 							<Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">{card.text}</Text>
