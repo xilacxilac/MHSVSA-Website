@@ -15,7 +15,7 @@ export default function Home(): JSX.Element {
 		<VStack bg={background}>
 			<ImageCaptionCarousel />
 			<VStack bg={background} h="2000px">
-				<Box h="50px" bg={background}></Box>
+				<Box h="30px" bg={background}></Box>
 				<Box w={{base: width * .9125 + 10, md: width * .7625 + 20}}>
 					<Divider height="10px" borderColor="gray"/>
 				</Box>
@@ -54,21 +54,21 @@ function CardBox(props) {
 }
 
 function ImageCaptionCarousel() {
-	// Cards for the Carousel
+	// Cards for the Carousel (1530 x 600, width x height, https://www.iloveimg.com/crop-image http://www.simpleimageresizer.com/upload)
 	const cards = [
 		{
 		title: 'Holiday Bazaar',
 		text:
 			"",
 		image:
-			'/Album/21-12-11/2.jpg',
+			'/ImageCarousel/1.jpg',
 		},
 		{
 		title: 'Lunar New Year Celebration Meeting',
 		text:
 			"",
 		image:
-			'/Album/22-1-31/3.JPEG',
+			'/ImageCarousel/2.JPEG',
 		},
 	];
 
@@ -95,7 +95,7 @@ function ImageCaptionCarousel() {
 	return (
 		<Box
 			position={'relative'}
-			height={'600px'}
+			height={'625px'}
 			width={'full'}
 			overflow={'hidden'}	
 		>
@@ -140,14 +140,14 @@ function ImageCaptionCarousel() {
 			<Slider {...imageCarouselSettings} ref={(slider) => setSlider(slider)}>
 			{cards.map((card, index) => (
 				<Box
-				key={index}
-				height={'4xl'}
-				position="relative"
-				backgroundPosition="center"
-				backgroundRepeat="no-repeat"
-				backgroundSize="cover"
-				backgroundImage={card.image}
-				>
+					key={index}
+					height="600px"
+					position="relative"
+					backgroundPosition="center"
+					backgroundRepeat="no-repeat"
+					backgroundSize="cover"
+					backgroundImage={card.image}
+				>	
 					{/* Customize the caption */}
 					<Container size="container.lg" height="600px" position="relative">
 						<Stack
@@ -157,7 +157,6 @@ function ImageCaptionCarousel() {
 							position="absolute"
 							top="80%"
 							transform="translate(0, -50%)"
-							
 						>
 							<Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} textAlign="center">{card.title}</Heading>
 							<Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">{card.text}</Text>
