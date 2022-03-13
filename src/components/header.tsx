@@ -1,64 +1,126 @@
-import { HStack, Link, Text, Image, VStack, Alert, AlertIcon, Center } from "@chakra-ui/react";
+import { Box, Flex, HStack, Link, IconButton, useDisclosure, useColorModeValue, Stack, Image, Text } from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from "@components/ColorModeSwitcher";
-import { useColorModeValue } from "@chakra-ui/react";
-import React from "react"
+import { ReactNode } from "react";
+import React from "react";
 
-// eslint-disable-next-line import/no-default-export
+const Links = [["Home", "/"], ["About Us", "/aboutus"], ["Officers", "/officers"], ["Events", "/events"],
+	["Fundraiser", "/fundraiser"],["Merch", "/merch"], ["Contact Us", "/contactus"]];
+const NavLink = ({ children }: { children: ReactNode }) => (
+  <Link
+    px={2}
+    py={1}
+    rounded={'md'}
+    _hover={{
+      textDecoration: 'none',
+      bg: useColorModeValue('gray.200', 'gray.700'),
+    }}
+	color={useColorModeValue("white", "black")}
+    href={children[1]}>
+    {children[0]}
+  </Link>
+);
+
 export default function Header(): JSX.Element {
-	const nameColor = useColorModeValue("/mhsvsa/mhsvsa_white.png", "/mhsvsa/mhsvsa_black.png");
+  	const nameColor = useColorModeValue("/mhsvsa/mhsvsa_white.png", "/mhsvsa/mhsvsa_black.png");
 	const background = useColorModeValue("#1a202c", "white");
 	const textColor = useColorModeValue("white", "black");
 	const width = findWidth();
+  return (
+    <>	
+		<DesktopNav width={width} background={background} nameColor={nameColor} textColor={textColor}/>
+		<MobileNav background={background} textColor={textColor}/>
+    </>
+  );
+}
+
+function DesktopNav(props) {
 	return (
-		<VStack spacing="0px" bg={background}>
-			<NotificationAlert 
-				display="true" // show alert
-				status="info" // alert type: error, success, warning, info
-				text="Fundraiser to Support Ukraine: Starting from 4/1 to 4/15, we will be allowing pre-orders of food."
-				href="/fundraiser"
-				textColor={textColor}
-				background={background}
-			/>
-			<HStack
-				width={width}
-				justify="space-between"
-				bg={background}
-				px="50px"
-				py="0px"
-				as="header"
-			>
-				<Link href="/">
-					<Image
-						src={nameColor}
-						width={{
-							base: "50px",
-							sm: "100px",
-							md: "200px",
-							lg: "250px",
-							xl: "350px",
+		<HStack
+			width={props.width}
+			justify="space-between"
+			bg={props.background}
+			px="50px"
+			py="0px"
+			as="header"
+			display={{base: "none", lg:"flex"}}
+		>
+			<Link href="/">
+				<Image
+					src={props.nameColor}
+					width={{
+						base: "50px",
+						sm: "100px",
+						md: "200px",
+						lg: "250px",
+						xl: "350px",
 						}}
-					/>
-				</Link>
-				<HStack
-					justify="center"
-					align="center"
-					spacing={{
-						base: "0",
-						sm: "10px",
-						md: "20px",
-						lg: "30px",
-						xl: "40px",
-					}}
-				>
-					<NavigationBar href="/" text="Home" />
-					<NavigationBar href="/aboutus" text="About Us" />
-					<NavigationBar href="/officers" text="Officers" />
-					<NavigationBar href="/events" text="Events" />
-					<NavigationBar href="/contactus" text="Contact Us" />
-					<ColorModeSwitcher />
-				</HStack>
+				/>
+			</Link>
+			<HStack
+				justify="center"
+				align="center"
+				spacing={{
+					base: "0",
+					sm: "10px",
+					md: "20px",
+					lg: "30px",
+					xl: "40px",
+				}}
+			>
+				<NavigationBar href="/" text="Home" />
+				<NavigationBar href="/aboutus" text="About Us" />
+				<NavigationBar href="/officers" text="Officers" />
+				<NavigationBar href="/events" text="Events" />
+				<NavigationBar href="/fundraiser" text="Fundraiser" />
+				<NavigationBar href="/merch" text="Merch" />
+				<NavigationBar href="/contactus" text="Contact Us" />
+				<ColorModeSwitcher />
 			</HStack>
-		</VStack>
+		</HStack>
+	);
+}
+
+function MobileNav(props) {
+	const { isOpen, onOpen, onClose } = useDisclosure();
+	return (
+		<Box bg={props.background} px={4} display={{base: "block", lg:"none"}}>
+    		<Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
+				<IconButton
+					size={'md'}
+					icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+					aria-label={'Open Menu'}
+					display={{ lg: 'none' }}
+					onClick={isOpen ? onClose : onOpen}
+					color={props.textColor}
+					bg={props.background}
+          		/>
+          		<HStack spacing={8} alignItems={'center'}>
+					<ColorModeSwitcher />
+            		<Box color={props.textColor}>Vietnamese Student Association</Box>
+					<HStack
+						as={'nav'}
+						spacing={4}
+						display={{ base: 'none', lg: 'flex' }}
+					>
+						{Links.map((link) => (
+							// @ts-ignore
+							<NavLink key={link}>{link}</NavLink>
+						))}
+					</HStack>
+          		</HStack>
+        	</Flex>
+			{isOpen ? (
+				<Box pb={4} display={{ lg: 'none' }}>
+					<Stack as={'nav'} spacing={4}>
+						{Links.map((link) => (
+							// @ts-ignore
+							<NavLink key={link}>{link}</NavLink>
+						))}
+					</Stack>
+				</Box>
+			) : null}
+      	</Box>
 	);
 }
 
@@ -79,25 +141,6 @@ function NavigationBar(props) {
 				{props.text}
 			</Text>
 		</Link>
-	);
-}
-
-function NotificationAlert(props) {
-	const displayed = (props.display) ? "flex" : "none"
-	return (
-		<Center display={displayed}>
-			<Alert status={props.status} justify="center" bg={props.background}>
-				<AlertIcon />
-				<Text color={props.textColor}>
-					{props.text} Check it out{' '}
-					<Text as="u">
-						<Link href={props.href} >
-							here
-						</Link>
-					</Text>
-				</Text>
-			</Alert>
-		</Center>
 	);
 }
 

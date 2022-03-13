@@ -7,9 +7,9 @@ import { useColorModeValue } from "@chakra-ui/react";
 
 export default function Home(): JSX.Element {
 	const width = findWidth();
-	console.log({width});
 	const background = useColorModeValue("black", "white");
 	const boxSize = {base: width * 0.45, md: width * .25};
+	console.log({width}, {boxSize})
 	const boxContainerHeight = {base: (width * width * 0.091125) + 20, md: (width * width * 0.0625) + 10};
 	return (
 		<VStack bg={background}>

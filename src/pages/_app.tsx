@@ -1,6 +1,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "@components/footer";
 import Header from "@components/header";
+import NotificationAlert from "@components/NotificationAlert";
 import theme from "@styles/theme";
 import { pageview } from "@lib/gtag";
 import { META } from "config";
@@ -8,6 +9,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure } from "@chakra-ui/react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -30,6 +32,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 				<link rel="icon" href="/vsa.ico" />
 			</Head>
 			<ChakraProvider theme={theme}>
+				<NotificationAlert/>
+				{/* <VerticallyCenter/> */}
 				<Header />
 
 				<Component {...pageProps} />
@@ -39,6 +43,30 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 		</>
 	);
 }
+
+// @ts-ignore feature disabled
+function VerticallyCenter() {
+	const { onClose } = useDisclosure();
+	const [show, setShow] = useState(0);
+	const arr = [true, false]
+	return (
+		<> 
+			<Modal onClose={onClose} isOpen={arr[show]} isCentered>
+				<ModalOverlay/>
+				<ModalContent>
+				<ModalHeader>Modal Title</ModalHeader>
+				<ModalCloseButton onClick={() => {setShow(show + 1)}}/>
+				<ModalBody>
+					heheheha
+				</ModalBody>
+				<ModalFooter>
+					<Button onClick={() => {setShow(show + 1)}}>Close</Button>
+				</ModalFooter>
+				</ModalContent>
+			</Modal>
+		</>
+	);
+  }
 
 export function useWindowSize() {
 	// Initialize state with undefined width/height so server and client renders match
