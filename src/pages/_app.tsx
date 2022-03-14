@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton,
 	ModalBody, ModalFooter, useDisclosure } from "@chakra-ui/react";
 
-export default function MyApp( { Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	// @ts-ignore
 	const size = useWindowSize();
