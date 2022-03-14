@@ -43,7 +43,7 @@ const theme: ThemeConfig = extendTheme({
 		}),
 	},
 	config: {
-		initialColorMode: "light",
+		initialColorMode: "system",
 		useSystemColorMode: "false",
 	},
 });

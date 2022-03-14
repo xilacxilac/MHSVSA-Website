@@ -9,9 +9,10 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure } from "@chakra-ui/react";
+import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton,
+	ModalBody, ModalFooter, useDisclosure } from "@chakra-ui/react";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp( { Component, pageProps }: AppProps) {
 	const router = useRouter();
 	// @ts-ignore
 	const size = useWindowSize();
@@ -92,4 +93,5 @@ export function useWindowSize() {
 	  return () => window.removeEventListener("resize", handleResize);
 	}, []); // Empty array ensures that effect is only run on mount
 	return windowSize;
-  }
+}
+  
