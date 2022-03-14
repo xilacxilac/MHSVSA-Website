@@ -61,14 +61,14 @@ function ImageCaptionCarousel() {
 		text:
 			"",
 		image:
-			'/ImageCarousel/1.jpg',
+			'./ImageCarousel/1.jpg',
 		},
 		{
 		title: 'Lunar New Year Celebration Meeting',
 		text:
 			"",
 		image:
-			'/ImageCarousel/2.JPEG',
+			'./ImageCarousel/2.JPEG',
 		},
 	];
 
