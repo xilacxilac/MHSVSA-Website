@@ -37,7 +37,6 @@ export default function Header(): JSX.Element {
 function DesktopNav(props) {
 	return (
 		<HStack
-			width={props.width}
 			justify="space-between"
 			bg={props.background}
 			px="50px"
