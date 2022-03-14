@@ -68,7 +68,7 @@ function ImageCaptionCarousel() {
 		text:
 			"",
 		image:
-			'./ImageCarousel/2.JPEG',
+			'./ImageCarousel/2.jpeg',
 		},
 	];
 
