@@ -11,12 +11,20 @@ function setCookie(name: string, value: string, days: number) {
 		date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
 		expires = `; expires=${date.toUTCString()}`;
 	}
+
 	document.cookie = `${name}=${value || ""}${expires}; path=/`;
+	
 }
 
 function getCookie(name: string) {
 	const nameEQ = `${name}=`;
-	const ca = document.cookie.split(";");
+	var ca = [];
+	try {
+		ca = document.cookie.split(";");
+	} catch (error) {
+		console.warn(error);
+	}
+	
 	for (let i = 0; i < ca.length; i++) {
 		let c = ca[i];
 		while (c.startsWith(" ")) {
