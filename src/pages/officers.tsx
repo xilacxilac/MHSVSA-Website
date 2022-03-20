@@ -1,11 +1,11 @@
 import React from 'react';
-import { VStack, Center, Text, Box, HStack, Heading, Collapse, Button, Image} from "@chakra-ui/react";
+import { VStack, Center, Text, Box, HStack, Heading, Image, Collapse} from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
 
 export default function Officers() {
 	const background = useColorModeValue("white", "black");
 	return (
-		<VStack bg={background} h='2000px'>
+		<VStack bg='white' h='1500px'>
 			<Center w='100%' height="300px" bg='lightgrey' color='black'>
 				<Heading fontSize='300%'>Meet Our Executive!</Heading>
 			</Center>
@@ -86,26 +86,25 @@ function ImageBox({ title, name, desc, url, alt, ...rest}) {
 	return (
 		<>
 			<Box
-				role="group"
 				mt={2}
 				p={5}
 				shadow='md'
 				borderWidth='1px'
 				flex='1'
 				borderRadius='md'
-				textAlign="center"
-				bg='grey'
-				//onMouseOver={handleToggle}
+				bg='gray'
 				onMouseEnter={() => setShow(true)}
 				onMouseLeave={() => setShow(false)}
 				{...rest}
 			>
-				<Heading mb={4} fontSize='xl'>{title}</Heading>
-				<Image align='center' objectFit='cover' src={url} alt={alt}/>
-				<Text mt={2} fontSize = 'large'>{name}</Text>
-				{show && (
+				<Heading align = 'center' mb={4} fontSize='xl'>{title}</Heading>
+				<Center>
+					<Image objectFit='cover' src={url} alt={alt}/>
+				</Center>
+				<Text align='center' mt={2} fontSize = 'large'>{name}</Text>
+				<Collapse in={show==true} animateOpacity>
 					<Text mt={2}> {desc}</Text>
-				)}
+				</Collapse>
 			</Box>
 	  	</>
 	)
