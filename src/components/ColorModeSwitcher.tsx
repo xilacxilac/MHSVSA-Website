@@ -20,6 +20,8 @@ export const ColorModeSwitcher = (props: ColorModeSwitcherProps) => {
 			icon={<SwitchIcon />}
 			aria-label={`Switch to ${text} mode`}
 			{...props}
+
+			display="none" // TEMPORARILY DISABLED
 		/>
 	);
 };

@@ -97,11 +97,11 @@ function MobileNav(props) {
           		<HStack spacing={8} alignItems={'center'}>
 					<ColorModeSwitcher />
             		<Box color={props.textColor}>
-						<Text display={{base: "none", sm: "flex"}}>
+						<Text fontSize="20px" display={{base: "none", sm: "flex"}}>
 							MHS Vietnamese Student Association
 						</Text>
 						<Text fontSize="20px" display={{base: "flex", sm: "none"}}>
-							MHS VSA
+							McLean HS VSA
 						</Text>
 					</Box>
 					<HStack

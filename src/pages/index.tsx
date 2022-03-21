@@ -158,7 +158,9 @@ function ImageCaptionCarousel() {
 							top="80%"
 							transform="translate(0, -50%)"
 						>
-							<Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} textAlign="center">{card.title}</Heading>
+							<Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} textAlign="center" 
+								display="none" // TEMPORARILY DISABLED
+							>{card.title}</Heading>
 							<Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">{card.text}</Text>
 						</Stack>
 					</Container>
