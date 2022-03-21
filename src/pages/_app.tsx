@@ -33,8 +33,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 				<link rel="icon" href="/vsa.ico" />
 			</Head>
 			<ChakraProvider theme={theme}>
-				<NotificationAlert/>
-				{/* <VerticallyCenter/> */}
+				<NotificationAlert />
+				{/* <VerticallyCenter/> TEMPORARILY DISABLED*/}
 				<Header />
 
 				<Component {...pageProps} />

@@ -19,10 +19,12 @@ function setCookie(name: string, value: string, days: number) {
 function getCookie(name: string) {
 	const nameEQ = `${name}=`;
 	var ca = [];
-	try {
-		ca = document.cookie.split(";");
-	} catch (error) {
-		console.warn(error);
+	if (typeof document !== "undefined") {
+		try {
+			ca = document.cookie.split(";");
+		} catch (error) {
+			console.warn(error);
+		}
 	}
 	
 	for (let i = 0; i < ca.length; i++) {

@@ -68,9 +68,6 @@ export default function NotificationAlert(): JSX.Element {
 			</HStack>
 		) : (
 			null
-		)
-	
-		)
-        
+		))
     );
 }

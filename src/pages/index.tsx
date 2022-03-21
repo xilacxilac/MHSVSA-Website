@@ -14,7 +14,7 @@ export default function Home(): JSX.Element {
 	return (
 		<VStack bg={background}>
 			<ImageCaptionCarousel />
-			<VStack bg={background} h="2000px">
+			<VStack bg={background}>
 				<Box h="30px" bg={background}></Box>
 				<Box w={{base: width * .9125 + 10, md: width * .7625 + 20}}>
 					<Divider height="10px" borderColor="gray"/>
