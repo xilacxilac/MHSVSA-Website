@@ -17,8 +17,9 @@ export default function NotificationAlert(): JSX.Element {
 			setCookie("notification", "false", 1);
 		}
 	}
-    const notificationBackground = "blue.50"
-	const textColor = useColorModeValue("white", "black");
+    const notificationBackground = "blue.50";
+	// const textColor = useColorModeValue("white", "black"); TEMPORARILY DISABLED
+	const textColor = "black";
     const settingsNotificationAlert = [
 		"info", // alert type: error, success, warning, info
 		"Fundraiser to Support Ukraine: Starting from 4/1 to 4/15, we will be allowing pre-orders of food.", // Text
@@ -58,12 +59,17 @@ export default function NotificationAlert(): JSX.Element {
 						</Text>
 					</Alert>
 				</Center>
-				<Button onClick={() => {
-					if (show == 0) {
-						setShow(show + 1);
-					}
-				}}>
-					<CloseButton color={textColor}/>
+				<Button background={notificationBackground} 
+					_hover={{ background: "white"}}
+					onClick={() => {
+						if (show == 0) {
+							setShow(show + 1);
+						}
+					}}
+				>
+					<CloseButton color={textColor}
+						_hover={{ background: "none"}}
+					/>
 				</Button>
 			</HStack>
 		) : (

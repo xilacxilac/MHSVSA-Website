@@ -22,9 +22,13 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 );
 
 export default function Header(): JSX.Element {
-  	const nameColor = useColorModeValue("/mhsvsa/mhsvsa_white.png", "/mhsvsa/mhsvsa_black.png");
-	const background = useColorModeValue("#1a202c", "white");
-	const textColor = useColorModeValue("white", "black");
+  	// TEMPORARILY DISABLED
+	// const nameColor = useColorModeValue("/mhsvsa/mhsvsa_white.png", "/mhsvsa/mhsvsa_black.png");
+	// const background = useColorModeValue("#1a202c", "white");
+	// const textColor = useColorModeValue("white", "black");
+	const nameColor = "/mhsvsa/mhsvsa_black.png";
+	const background = "white";
+	const textColor = "black";
 	const width = findWidth();
   return (
     <>	
@@ -131,7 +135,8 @@ function MobileNav(props) {
 }
 
 function NavigationBar(props) {
-	const textColor = useColorModeValue("white", "black");
+	// const textColor = useColorModeValue("white", "black"); TEMPORARILY DISABLED
+	const textColor = "black";
 	return (
 		<Link href={props.href}>
 			<Text

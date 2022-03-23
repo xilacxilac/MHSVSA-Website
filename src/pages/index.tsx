@@ -7,7 +7,8 @@ import { useColorModeValue } from "@chakra-ui/react";
 
 export default function Home(): JSX.Element {
 	const width = findWidth();
-	const background = useColorModeValue("black", "white");
+	// const background = useColorModeValue("black", "white"); TEMPORARILY DISABLED
+	const background = "white";
 	const boxSize = {base: width * 0.45, md: width * .25};
 	console.log({width}, {boxSize})
 	const boxContainerHeight = {base: (width * width * 0.091125) + 20, md: (width * width * 0.0625) + 10};
