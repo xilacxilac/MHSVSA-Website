@@ -1,8 +1,10 @@
 import React from 'react';
 import { VStack, Text, Box, IconButton, useBreakpointValue, Stack, Heading,
-	Container, Center, Wrap, WrapItem, Divider, Link } from "@chakra-ui/react";
+	Container, Center, Wrap, WrapItem, Divider, Link, HStack } from "@chakra-ui/react";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import Slider from 'react-slick';
+import { IoSchoolOutline } from "react-icons/io5"
+import { FaInstagram } from "react-icons/fa"
 import { useColorModeValue } from "@chakra-ui/react";
 
 export default function Home(): JSX.Element {
@@ -35,11 +37,36 @@ export default function Home(): JSX.Element {
 					<Divider height="17.5px" borderColor="gray"/>
 				</Box>
 				<Box h="30px" bg={background}></Box>
+				<Box justify="center" w={{base: width * .9 + 10, md:width * .75 + 20}} maxH={boxContainerHeight}>
+					<Wrap spacing="10px" >
+						<StayInTouch href="https://www.instagram.com/mclean_vsa/" icon="IoSchoolOutline" label="Instagram" background={background} color/>
+					</Wrap>
+				</Box>
 			</VStack>
 		</VStack>
 	);
 }
   
+function StayInTouch(props) {
+	// const textColor = useColorModeValue("white", "black");
+	const textColor = "black";
+	return (
+		<WrapItem>
+			<Link href={props.href} >
+				<FaInstagram size="100px" color={textColor}/>
+			</Link>
+			<Link href={props.href} >
+				<IoSchoolOutline size="100px" color={textColor}/>
+			</Link>
+			<Center bg={props.bg} w={props.boxSize} h={props.boxSize}>
+				<Text color={textColor}>
+					pooop
+				</Text>
+			</Center>
+		</WrapItem>
+	);
+}
+
 function CardBox(props) {
 	return (
 		<WrapItem>

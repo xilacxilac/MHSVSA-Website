@@ -90,13 +90,13 @@ function MobileNav(props) {
 		<Box bg={props.background} px={4} display={{base: "block", lg:"none"}}>
     		<Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
 				<IconButton
-					size={'md'}
+					size="md"
 					icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
 					aria-label={'Open Menu'}
 					display={{ lg: 'none' }}
 					onClick={isOpen ? onClose : onOpen}
 					color={props.textColor}
-					bg={props.background}
+					bg="{props.background}"
           		/>
           		<HStack spacing={8} alignItems={'center'}>
 					<ColorModeSwitcher />
@@ -148,6 +148,7 @@ function NavigationBar(props) {
 					xl: "xl",
 				}}
 				color={textColor}
+				_hover={{ color: "gray" }}
 			>
 				{props.text}
 			</Text>

@@ -60,7 +60,7 @@ export default function NotificationAlert(): JSX.Element {
 					</Alert>
 				</Center>
 				<Button background={notificationBackground} 
-					_hover={{ background: "white"}}
+					_hover={{ background: "white"}} // CHANGE LATER FOR COLOR MODE SUPPORT
 					onClick={() => {
 						if (show == 0) {
 							setShow(show + 1);
@@ -68,7 +68,7 @@ export default function NotificationAlert(): JSX.Element {
 					}}
 				>
 					<CloseButton color={textColor}
-						_hover={{ background: "none"}}
+						_hover={{ background: "none"}} // CHANGE LATER FOR COLOR MODE SUPPORT
 					/>
 				</Button>
 			</HStack>
