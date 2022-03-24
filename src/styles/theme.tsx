@@ -34,10 +34,12 @@ const theme: ThemeConfig = extendTheme({
 			},
 			"&::-webkit-scrollbar-track": {
 				borderRadius: "0px",
-				background: "transparent",
+				background: "gray.100"
+				// background: "transparent", MAYBE CHANGE LATER
 			},
 			"&::-webkit-scrollbar-thumb": {
-				background: "brand.primary",
+				// background: "brand.primary", MAYBE CHANGE LATER
+				background: "gray.400",
 				borderRadius: "50px",
 			},
 		}),

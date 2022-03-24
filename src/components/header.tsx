@@ -148,7 +148,7 @@ function NavigationBar(props) {
 					xl: "xl",
 				}}
 				color={textColor}
-				_hover={{ color: "gray" }}
+				_hover={{ color: "gray.500" }}
 			>
 				{props.text}
 			</Text>

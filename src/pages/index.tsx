@@ -121,6 +121,9 @@ function ImageCaptionCarousel() {
 				transform={'translate(0%, -50%)'}
 				zIndex={2}
 				onClick={() => slider?.slickPrev()}
+				_hover={{ background:"transparent", color:"red.300" }}
+				_active={{ background:"transparent" }}
+				_focus={{ outline:"none" }}
 			>
 			<GoChevronLeft size="40px"/>
 			</IconButton>
@@ -134,6 +137,9 @@ function ImageCaptionCarousel() {
 				transform={'translate(0%, -50%)'}
 				zIndex={2}
 				onClick={() => slider?.slickNext()}
+				_hover={{ background:"transparent", color:"red.300" }}
+				_active={{ background:"transparent" }}
+				_focus={{ outline:"none" }}
 			>
 			<GoChevronRight size="40px" />
 			</IconButton>

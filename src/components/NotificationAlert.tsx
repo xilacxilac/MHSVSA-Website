@@ -1,6 +1,7 @@
 import { useColorModeValue, Button, Alert, AlertIcon, Center, CloseButton, HStack, Link, Text } from '@chakra-ui/react';
 import { useState } from "react";
 import { setCookie, getCookie } from "../lib/cookie";
+import { MdClose } from "react-icons/md"
 
 export default function NotificationAlert(): JSX.Element {
     // To disable NotificationAlert all together, set UseState(0) to UseState(1) and set setShow(show + 1) to setShow(show)
@@ -51,7 +52,7 @@ export default function NotificationAlert(): JSX.Element {
 						>
 							{settingsNotificationAlert[1]} Check it out{' '}
 							<Text as="u">
-								<Link href={settingsNotificationAlert[2]} >
+								<Link href={settingsNotificationAlert[2]} _hover={{ color: "gray.500" }}>
 									here
 								</Link>
 							</Text>
@@ -60,16 +61,15 @@ export default function NotificationAlert(): JSX.Element {
 					</Alert>
 				</Center>
 				<Button background={notificationBackground} 
-					_hover={{ background: "white"}} // CHANGE LATER FOR COLOR MODE SUPPORT
+					_hover={{ background: "white" }} // CHANGE LATER FOR COLOR MODE SUPPORT
+					_active={{ background: "white"}} // CHANGE LATER FOR COLOR MODE SUPPORT
 					onClick={() => {
 						if (show == 0) {
 							setShow(show + 1);
 						}
 					}}
 				>
-					<CloseButton color={textColor}
-						_hover={{ background: "none"}} // CHANGE LATER FOR COLOR MODE SUPPORT
-					/>
+					<MdClose color={textColor} size="21px"/>
 				</Button>
 			</HStack>
 		) : (
