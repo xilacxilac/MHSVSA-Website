@@ -57,7 +57,7 @@ function DesktopNav(props) {
 						md: "200px",
 						lg: "250px",
 						xl: "350px",
-						}}
+					}}
 				/>
 			</Link>
 			<HStack

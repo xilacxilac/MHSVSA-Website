@@ -23,7 +23,7 @@ function DesktopFoot(props) {
 			<HStack>
 				<Wrap spacing="100px">
 					<WrapItem h="300px" w="300px" bg="pink">
-						<Box px="5px" py="10px" border="1px" borderColor="gray">
+						<Box px="5px" py="10px" borderColor="gray">
 							<VStack>
 								<Heading color={props.textColor} fontSize="17px">
 									About Us
@@ -37,7 +37,7 @@ function DesktopFoot(props) {
 						</Box>
 					</WrapItem>
 					<WrapItem h="300px" w="150px" bg="red">
-						<Box px="5px" py="10px" border="1px" borderColor="gray">
+						<Box px="5px" py="10px" borderColor="gray">
 							<VStack>
 								<Heading color={props.textColor} fontSize="17px" textAlign="center">
 									Address
@@ -51,7 +51,7 @@ function DesktopFoot(props) {
 						</Box>
 					</WrapItem>
 					<WrapItem h="300px" w="200px" bg="green">
-						<Box px="5px" py="10px" border="1px" borderColor="gray">
+						<Box px="5px" py="10px" borderColor="gray">
 							<VStack>
 								<Heading color={props.textColor} fontSize="17px" textAlign="center">
 									Contacts
