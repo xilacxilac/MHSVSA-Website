@@ -6,14 +6,15 @@ export default function Officers() {
 	const background = useColorModeValue("white", "black");
 	return (
 		<VStack bg='white' h='1500px'>
-			<Center w='100%' height="300px" bg='lightgrey' color='black'>
+			<Center w='100%' height="270px" bg='lightgrey' color='black'>
 				<Heading fontSize='300%'>Meet Our Executive!</Heading>
 			</Center>
 			<HStack w='97%' spacing={10}>
 				<ImageBox
 					title='Title'
 					name='Name'
-					url='https://bit.ly/dan-abramov'
+					url=''
+					fallbackurl='https://via.placeholder.com/300'
 					alt='Dan Abramov'
 					desc='This is where we put the information about the officer and 
 						should hopefully show when I hover over their image'
@@ -21,7 +22,8 @@ export default function Officers() {
 				<ImageBox
 					title='Title'
 					name='Name'
-					url='https://bit.ly/dan-abramov'
+					url=''
+					fallbackurl='https://via.placeholder.com/300'
 					alt='Dan Abramov'
 					desc='This is where we put the information about the officer and 
 						should hopefully show when I hover over their image'
@@ -29,7 +31,8 @@ export default function Officers() {
 				<ImageBox
 					title='Title'
 					name='Name'
-					url='https://bit.ly/dan-abramov'
+					url=''
+					fallbackurl='https://via.placeholder.com/300'
 					alt='Dan Abramov'
 					desc='This is where we put the information about the officer and 
 						should hopefully show when I hover over their image'
@@ -37,7 +40,8 @@ export default function Officers() {
 				<ImageBox
 					title='Title'
 					name='Name'
-					url='https://bit.ly/dan-abramov'
+					url=''
+					fallbackurl='https://via.placeholder.com/300'
 					alt='Dan Abramov'
 					desc='This is where we put the information about the officer and 
 						should hopefully show when I hover over their image'
@@ -47,7 +51,8 @@ export default function Officers() {
 				<ImageBox
 					title='Title'
 					name='Name'
-					url='https://bit.ly/dan-abramov'
+					url=''
+					fallbackurl='https://via.placeholder.com/300'
 					alt='Dan Abramov'
 					desc='This is where we put the information about the officer and 
 						should hopefully show when I hover over their image'
@@ -55,7 +60,8 @@ export default function Officers() {
 				<ImageBox
 					title='Title'
 					name='Name'
-					url='https://bit.ly/dan-abramov'
+					url=''
+					fallbackurl='https://via.placeholder.com/300'
 					alt='Dan Abramov'
 					desc='This is where we put the information about the officer and 
 						should hopefully show when I hover over their image'
@@ -63,7 +69,8 @@ export default function Officers() {
 				<ImageBox
 					title='Title'
 					name='Name'
-					url='https://bit.ly/dan-abramov'
+					url=''
+					fallbackurl='https://via.placeholder.com/300'
 					alt='Dan Abramov'
 					desc='This is where we put the information about the officer and 
 						should hopefully show when I hover over their image'
@@ -71,7 +78,8 @@ export default function Officers() {
 				<ImageBox
 					title='Title'
 					name='Name'
-					url='https://bit.ly/dan-abramov'
+					url=''
+					fallbackurl='https://via.placeholder.com/300'
 					alt='Dan Abramov'
 					desc='This is where we put the information about the officer and 
 						should hopefully show when I hover over their image'
@@ -81,7 +89,7 @@ export default function Officers() {
 	);
 }
 
-function ImageBox({ title, name, desc, url, alt, ...rest}) {
+function ImageBox({ title, name, desc, url, fallbackurl, alt, ...rest}) {
 	const[show, setShow] = React.useState(false)
 	return (
 		<>
@@ -99,7 +107,7 @@ function ImageBox({ title, name, desc, url, alt, ...rest}) {
 			>
 				<Heading align = 'center' mb={4} fontSize='xl'>{title}</Heading>
 				<Center>
-					<Image objectFit='cover' src={url} alt={alt}/>
+					<Image objectFit='cover' src={url} fallbackSrc={fallbackurl} alt={alt}/>
 				</Center>
 				<Text align='center' mt={2} fontSize = 'large'>{name}</Text>
 				<Collapse in={show==true} animateOpacity>
