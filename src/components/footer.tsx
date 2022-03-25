@@ -18,11 +18,11 @@ export default function footer(): JSX.Element {
 
 function DesktopFoot(props) {
 	return (
-		<VStack h={{ sm: "1000px", xl: "450px" }} bg={props.background} display={{base: "none", lg:"flex"}}>
+		<VStack h={{ lg: "800px", xl: "550px" }} bg={props.background} display={{base: "none", lg:"flex"}}>
 			<Box h="75px"></Box>
 			<HStack>
 				<Wrap spacing="100px">
-					<WrapItem h="300px" w="300px">
+					<WrapItem h="300px" w="300px" bg="pink">
 						<Box px="5px" py="10px" border="1px" borderColor="gray">
 							<VStack>
 								<Heading color={props.textColor} fontSize="17px">
@@ -36,7 +36,7 @@ function DesktopFoot(props) {
 							</VStack>
 						</Box>
 					</WrapItem>
-					<WrapItem h="300px" w="150px">
+					<WrapItem h="300px" w="150px" bg="red">
 						<Box px="5px" py="10px" border="1px" borderColor="gray">
 							<VStack>
 								<Heading color={props.textColor} fontSize="17px" textAlign="center">
@@ -50,7 +50,7 @@ function DesktopFoot(props) {
 							</VStack>
 						</Box>
 					</WrapItem>
-					<WrapItem h="300px" w="200px">
+					<WrapItem h="300px" w="200px" bg="green">
 						<Box px="5px" py="10px" border="1px" borderColor="gray">
 							<VStack>
 								<Heading color={props.textColor} fontSize="17px" textAlign="center">
@@ -65,9 +65,12 @@ function DesktopFoot(props) {
 					</WrapItem>
 				</Wrap>
 			</HStack>
-			<Box bg={props.background} w={{base: props.width * .9125 + 10, md: props.width * .7625 + 20}}>
+			<Box w={{base: props.width * .9125 + 10, md: props.width * .7625 + 20}} h="30px">
 				<Divider height="10px" borderColor="gray"/>
 			</Box>
+			<Text color={props.textColor}>
+				Copyright © 2022 McLean High School Vietnamese Student Association
+			</Text>
 		</VStack>
 	);	
 }
@@ -89,3 +92,4 @@ const findWidth = () => {
 	});
 	return width;
 };
+
