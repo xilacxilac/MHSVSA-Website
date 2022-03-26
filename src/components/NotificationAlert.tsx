@@ -23,7 +23,7 @@ export default function NotificationAlert(): JSX.Element {
 	const textColor = "black";
     const settingsNotificationAlert = [
 		"info", // alert type: error, success, warning, info
-		"Fundraiser to Support Ukraine: Starting from 4/1 to 4/15, we will be allowing pre-orders of food.", // Text
+		"Fundraiser to Support the Children: Starting from 4/28 to 4/15, we will be allowing pre-orders of food.", // Text
 		"/fundraiser" // href
 	]
     return (

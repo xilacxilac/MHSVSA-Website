@@ -8,7 +8,7 @@ import { useColorModeValue } from "@chakra-ui/react";
 export default function Home(): JSX.Element {
 	const width = findWidth();
 	// const background = useColorModeValue("black", "white"); TEMPORARILY DISABLED
-	const background = "white";
+	const background = "red.50";
 	const boxSize = {base: width * 0.45, md: width * .25};
 	console.log({width}, {boxSize})
 	const boxContainerHeight = {base: (width * width * 0.091125) + 20, md: (width * width * 0.0625) + 10};
@@ -34,7 +34,6 @@ export default function Home(): JSX.Element {
 				<Box w={{base: width * .9125 + 10, md: width * .7625 + 20}}>
 					<Divider height="17.5px" borderColor="gray"/>
 				</Box>
-				<Box h="30px" bg={background}></Box>
 			</VStack>
 		</VStack>
 	);

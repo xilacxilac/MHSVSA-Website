@@ -27,7 +27,7 @@ export default function Header(): JSX.Element {
 	// const background = useColorModeValue("#1a202c", "white");
 	// const textColor = useColorModeValue("white", "black");
 	const nameColor = "/mhsvsa/mhsvsa_black.png";
-	const background = "white";
+	const background = "red.50";
 	const textColor = "black";
 	const width = findWidth();
   return (
