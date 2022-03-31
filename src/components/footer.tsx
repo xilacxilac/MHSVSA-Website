@@ -8,7 +8,7 @@ import { MdOutlineSchool } from "react-icons/md"
 export default function footer(): JSX.Element {
 	// const background = useColorModeValue("#1a202c", "gray.50");
 	// const textColor = useColorModeValue("white", "black");
-	const background = "red.50" // "gray.50";
+	const background = "gray.50";
 	const textColor = "black";
 	const width = findWidth();
 	return (
@@ -25,8 +25,8 @@ function DesktopFoot(props) {
 			<Box h="25px"></Box>
 			<HStack w={{base: props.width * .9125 + 10, lg: props.width * .7625 + 20}} justify={{lg:"center", xl:"space-in-between"}}>
 				<HStack>
-					<Wrap spacing={{lg: "100px", xl: "25px"}}>
-						<WrapItem h="200px" w={{lg: "400px", xl: "400px"}}>
+					<Wrap spacing={{lg: "100px", xl: "50px"}}>
+						<WrapItem h="150px" w={{lg: "400px", xl: "400px"}} >
 							<Box px="5px" py="10px" borderColor="gray">
 								<VStack display="block">
 									<Heading color={props.textColor} fontSize="17px">
@@ -53,7 +53,7 @@ function DesktopFoot(props) {
 								</VStack>
 							</Box>
 						</WrapItem>
-						<WrapItem h="200px" w="200px" bg="">
+						<WrapItem h="150px" w="200px" bg="">
 							<Box px="5px" py="10px" borderColor="gray">
 								<VStack display="block">
 									<Heading color={props.textColor} fontSize="17px" textAlign="left">
@@ -61,7 +61,8 @@ function DesktopFoot(props) {
 									</Heading>
 									<Text color={props.textColor} fontSize="15px">
 										mcleanvsa@gmail.com <br/>
-										xilacxilac@gmail.com
+										xilacxilac@gmail.com <br/>
+										naho22101@gmail.com
 									</Text>
 								</VStack>
 							</Box>
@@ -69,7 +70,7 @@ function DesktopFoot(props) {
 					</Wrap>
 				</HStack>
 				<Spacer display={{lg: "none", xl:"flex"}}/>
-				<Box display={{lg: "none", xl:"flex"}} h="200px">
+				<Box display={{lg: "none", xl:"flex"}} h="150px">
 					<HStack h="30px">
 					<Link href="https://instagram.com/mclean_vsa/" isExternal>
 						<FaInstagram color={props.textColor} size="30px"/>

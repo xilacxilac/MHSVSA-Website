@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Link, IconButton, useDisclosure, useColorModeValue, Stack, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, HStack, Link, IconButton, useDisclosure, useColorModeValue, Stack, Image, Text, VStack } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from "@components/ColorModeSwitcher";
 import { ReactNode } from "react";
@@ -27,12 +27,12 @@ export default function Header(): JSX.Element {
 	// const background = useColorModeValue("#1a202c", "white");
 	// const textColor = useColorModeValue("white", "black");
 	const nameColor = "/mhsvsa/mhsvsa_black.png";
-	const background = "red.50";
+	const background = "white";
 	const textColor = "black";
 	const width = findWidth();
   return (
     <>	
-		<DesktopNav width={width} background={background} nameColor={nameColor} textColor={textColor}/>
+		<DesktopNav width={width} background={background} nameColor={nameColor} textColor={textColor} border={width}/>
 		<MobileNav background={background} textColor={textColor}/>
     </>
   );
@@ -47,6 +47,7 @@ function DesktopNav(props) {
 			py="0px"
 			as="header"
 			display={{base: "none", lg:"flex"}}
+			width={props.border}
 		>
 			<Link href="/">
 				<Image

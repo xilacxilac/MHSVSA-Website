@@ -14,7 +14,7 @@ export default function Officers() {
 function DesktopOfficers(props) {
 	return (
 		<VStack bg='white' h='1500px' display={{base: "none", lg:"flex"}}>
-			<Center w='100%' height="270px" bg='lightgrey' color='black'>
+			<Center w='100%' height="300px" bg='lightgrey' color='black'>
 				<Heading fontSize='300%'>Meet Our Executives!</Heading>
 			</Center>
 			<HStack w='97%' spacing={10}>
