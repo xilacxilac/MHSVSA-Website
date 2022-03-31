@@ -47,7 +47,7 @@ function DesktopNav(props) {
 			py="0px"
 			as="header"
 			display={{base: "none", lg:"flex"}}
-			width={props.border}
+			width="100%"
 		>
 			<Link href="/">
 				<Image

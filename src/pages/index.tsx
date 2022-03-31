@@ -8,14 +8,14 @@ import { useColorModeValue } from "@chakra-ui/react";
 export default function Home(): JSX.Element {
 	const width = findWidth();
 	// const background = useColorModeValue("black", "white"); TEMPORARILY DISABLED
-	const background = "red.50";
+	const background = "white";
 	const boxSize = {base: width * 0.45, md: width * .25};
 	console.log({width}, {boxSize})
 	const boxContainerHeight = {base: (width * width * 0.091125) + 20, md: (width * width * 0.0625) + 10};
 	return (
 		<VStack bg={background}>
 			<ImageCaptionCarousel />
-			<VStack bg={background}>
+			<VStack bg={background} >
 				<Box h="30px" bg={background}></Box>
 				<Box w={{base: width * .9125 + 10, md: width * .7625 + 20}}>
 					<Divider height="10px" borderColor="gray"/>
