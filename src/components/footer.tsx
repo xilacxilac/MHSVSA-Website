@@ -3,7 +3,6 @@ import { Box } from "@chakra-ui/react";
 export default function footer(): JSX.Element {
 	return (
 		<Box as="footer">
-			Hello
 		</Box>
 	);
 }
