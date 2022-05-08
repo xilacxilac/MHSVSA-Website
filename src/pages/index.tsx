@@ -21,6 +21,7 @@ export default function Home(): JSX.Element {
 					<Divider height="10px" borderColor="gray"/>
 				</Box>
 				<Box h="10px" bg={background}></Box>
+				{/*@ts-ignore*/}
 				<Box justify="center" w={{base: width * .9 + 10, md:width * .75 + 20}} maxH={boxContainerHeight}>
 					<Wrap spacing="10px" >
 						<CardBox bg="blue" boxSize={boxSize} text="About Us" href="/aboutus"/>

@@ -23,7 +23,7 @@ export default function NotificationAlert(): JSX.Element {
 	const textColor = "black";
     const settingsNotificationAlert = [
 		"info", // alert type: error, success, warning, info
-		"Fundraiser to Support the Children: Starting from 4/28 to 4/15, we will be allowing pre-orders of food.", // Text
+		"Save the Children: Till 4/15, we will be open for donations and pre-orders of food to raise money for less-fortunate children!", // Text
 		"/fundraiser" // href
 	]
     return (
@@ -50,7 +50,7 @@ export default function NotificationAlert(): JSX.Element {
 								xl: "16px",
 							}}
 						>
-							{settingsNotificationAlert[1]} Check it out{' '}
+							{settingsNotificationAlert[1]} Find out more{' '}
 							<Text as="u">
 								<Link href={settingsNotificationAlert[2]} _hover={{ color: "gray.500" }}>
 									here
